@@ -8,7 +8,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "45 8 * * *"
+    - cron: "00 11 * * *"
       timezone: "Asia/Shanghai"
 
 concurrency:
