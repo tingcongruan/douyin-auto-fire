@@ -8,7 +8,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: "03 22 * * *"
+    - cron: "14 22 * * *"
       timezone: "Asia/Shanghai"
 
 concurrency:
@@ -108,7 +108,7 @@ jobs:
       - name: Run
         shell: bash
         run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "false" ]]; then
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.dry_run }}" == "true" ]]; then
             python run.py --dry-run
           else
             python run.py
